@@ -1,0 +1,122 @@
+%Czcionka 12pkt
+\documentclass[12pt]{report}
+
+%Język Polski + Time New Romans
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgtermes}
+\usepackage{polski}
+
+%automatyczne akapity przy nowym rozdziale
+\usepackage{indentfirst} 
+
+% Do tabel
+\usepackage{multirow} 
+
+ % ------------ Do Listingów (ustawianie języka, colorków itp) ------------ %
+\usepackage{listings} 
+\renewcommand{\lstlistlistingname}{Spis listingów}
+\lstset {
+    language=C,
+    frame=single,
+    tabsize=4,
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    commentstyle=\color{commentgreen},
+    keywordstyle=\color{eminence},
+    stringstyle=\color{red},
+    basicstyle=\small\ttfamily,
+    emph={int,char,double,float,unsigned,void,bool,return},
+    emphstyle={\color{blue}},
+    escapechar=\&,
+    classoffset=1,
+    keywordstyle=\color{blue},
+    morekeywords={>,<,.,;,,,-,!,=,~},
+    classoffset=0,
+}
+% ------------------------------------------------------------------------ %
+
+% Do wgrania strony tytułowej jako pdfa
+\usepackage{pdfpages}
+
+%Do bibliografii
+\usepackage[style=numeric,firstinits,maxbibnames=100,language=polish,sortlocale=pl_PL]{biblatex}
+\addbibresource{biblio.bib}
+
+%Marginesy + margines pod oprawę pod druk dwustronny :)
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm,twoside]{geometry}
+\usepackage{lipsum}
+
+%Rozmiar tytułów rozdziałów, podrozdziałów i pod-podrozdziałów
+\usepackage{sectsty}
+\sectionfont{\fontsize{14}{13}\selectfont}
+\subsectionfont{\fontsize{13}{12}\selectfont}
+\subsubsectionfont{\fontsize {12}{11}\selectfont}
+
+%Ustawienia podpisów tabel, rysunków, równań i listingów
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\usepackage{caption}
+\DeclareCaptionFormat{myformat}{\fontsize{10}{10}\selectfont#1#2#3}
+\captionsetup{format=myformat}
+\usepackage{graphicx}
+\DeclareCaptionType{equ}[][]
+
+%Interlinia pojedyncza i długość akapitów
+\renewcommand{\baselinestretch}{1}
+\setlength{\parindent}{0.7cm}
+
+%Możliwość dodanie obu streszczeń (ang i pol) na jednej stronie
+\renewenvironment{abstract}{
+    \vspace{150}
+    \begin{center}%
+        \bfseries\abstractname
+    \end{center}}%
+
+%## POCZAĘTEK DOKUMENTU ##%
+\begin{document}
+
+%#############################     STRONA TYTUŁOWA     ################################%
+\begin{titlepage}       
+\includepdf{pd_mgr_pl}              % Polecam wygenerować se stronę tytułową ze schematu ze strony w docxie przez google doca np. a potem wstawić jako plik PDF, bo inaczej to dużo roboty :)
+\end{titlepage}                      
+%######################################################################################%
+\newpage
+\shipout\null       % Pusta strona, aby drukowało się ładnie :) Można wywalić przy generowaniu wersji cyfrowej pracy
+
+%############################       STRESZCZENIE    ###################################%
+\begin{abstract}
+    Streszczenie po polsku.         %Twoje streszczenie po polsku
+\end{abstract}
+
+\renewcommand{\abstractname}{Abstract} %Tak wiem, głupia metoda na zmianę nagłówka streszczenia, ale używając dedykowanego pakietu "babel" były problemu z resztą dokumentu więc zostawiam to tak.
+\begin{abstract}
+    Abstract in English.            % Twoje streszczenie po angielsku
+\end{abstract}
+%######################################################################################%
+\newpage
+\shipout\null       % Pusta strona, aby drukowało się ładnie :) Można wywalić przy generowaniu wersji cyfrowej pracy
+
+\tableofcontents    % Spis treści
+\newpage
+\shipout\null       % Pusta strona, aby drukowało się ładnie :) Można wywalić przy generowaniu wersji cyfrowej pracy
+
+%###############################   TREŚĆ GŁÓWNA PRACY ##################################%
+
+\include{chapter1} % ZOBACZ PLIK CHAPTER1.TEX 
+
+% W pliku "chapter.tex" jest cała treść pracy. Zamieściłem tam przykłady tabel, rysunków oraz równań :) % 
+
+%Bibliografia - z pliku biblio.bib
+%\bibliographystyle{plain}
+%\bibliography{biblio.bib}
+
+\printbibliography
+
+\listoftables   %Spis tabel
+\listoffigures  %Spis rysunków
+\lstlistoflistings %Spis listingów - nie wiem czy jest konieczny ale dodałem
+
+\end{document}

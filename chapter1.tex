@@ -1,0 +1,70 @@
+\chapter{Nazwa rozdziału}
+
+\section{Rozdział}
+Zażółć gęślą jaźń :). Polskie znaki działają podczas kopiowania pdfa czyli działają też w systemie anty-plagiatowym. Pierwszy wiersz automatycznie wstawia akapit. \\ %nowa linia
+\indent Zobacz do kodu jeżeli chcesz wstawić dodatkowy akapit. \cite{goodfellow2016deep} %Nowy wymuszony akapit 
+
+%%% PRZYKłŁADOWA TABELA %%%%%%%%%%%%%%%%%
+                                        %
+\begin{table}[ht]                       %
+\centering                              %
+\caption{Podpis nad tabelą,             %
+         czcionka 10 pkt                %
+         tak jak chcą w wymogach }      %
+\begin{tabular}[t]{|c|c|c|c|}           %   
+\hline                                  %
+kolumna1 & kolumna2 & kolumna3 \\       %  
+\hline                                  %       PRZYKłŁADOWA TABELA
+komórka1 & komórka2 & komórka3 \\       %
+komórka4 & komórka5 & komórka6 \\       %
+komórka7 & komórka8 & komórka9 \\       %
+\hline                                  %
+\end{tabular}                           %
+\label{tab:caption}                     %
+\end{table}                             %
+                                        %
+%%% KONIEC PRZYKŁADOWEJ TABELI %%%%%%%%%%
+
+\lipsum[2]   %Wygenerowanie przykładowego tekstu [USUŃ]
+
+%%% PRZYKŁADOWY OBRAZEK %%%%%%%%%%%%%%%%%%%%%%%%%
+                                                %
+\begin{figure}[h!]{}                            %
+    \centering                                  %
+    \includegraphics[scale=0.4]{pobrane.png}    %       PRZYKŁADOWY OBRAZEK
+    \caption{Podpis pod rysunkiem}              %
+    \label{fig:logo}                            %
+\end{figure}                                    %
+                                                %
+%KONIEC PZYŁADOWEGO OBRAZKA %%%%%%%%%%%%%%%%%%%%%
+
+
+\lipsum[2] \cite{min2017deep} %Wygenerowanie przykładowego tekstu [USUŃ]
+
+%%% PRZYKŁADOWE RÓWNANIE %%%%%%%%%%%%%%%%
+                                        %
+\begin{equ}[!ht]                        %
+  \begin{equation}                      %
+    E=mc^2                              %       PRZYKŁADOWE RÓWNANIE
+  \end{equation}                        %
+\end{equ}                               %
+                                        %
+%%% KONIEC PRZYKŁADOWEGO RÓWNANIA %%%%%%%
+
+\lipsum[2] %Wygenerowanie przykładowego tekstu [USUŃ]
+
+\begin{lstlisting}[caption=Podpis listingu,label=code1]
+    #include <stdio.h>
+    int main () {
+        printf("Hello, World!");
+        return 0;
+    }
+\end{lstlisting}
+\subsection{Podrozdział}
+
+\lipsum[1-15]    %Wygenerowanie przykładowego tekstu [USUŃ]
+
+\chapterstyle{default}
+\subsubsection{Pod-podrozdział}
+
+\lipsum[1-5]    %Wygenerowanie przykładowego tekstu [USUŃ]
