@@ -4,11 +4,11 @@ Stworzony szablon powinien przestrzegać wszystkoich wymogów edytorskich okreś
 
 ## Wykorzystane pakiety
 
-Wszystkie wykorzystane pakiety zostały opisane w komantarzach w pliku `main.tex`. Można zobaczyć do czego konkretny pakiet służy i usunąc linijkę z kodu jeżeli jest dla nas zbędny.
+Wszystkie wykorzystane pakiety zostały opisane w komantarzach w pliku `main.tex`. Można zobaczyć do czego konkretny pakiet służy i usunąć linijkę z kodu jeżeli jest dla nas zbędny.
 
 ## Strona tytułowa
 
-Strona tytułowa nie została przygotowana w LaTeXu poprzez zwykłe lenistwo. LaTeX ma jednak możliwość wgrania pliku PDF i dołączenie go do całości dokumentu. Tak też jest dołączona strona tyytułowa w tych szablonie. Polecam wygenerować stronę tytułową np w google docsach jako PDF z szbalonu wydziałowego (dołączony plik `pd_szablon.docx`, pobrany z [Praca dyplomowa - Wydział Informatyki i Telekomunikacji](https://wit.pwr.edu.pl/studenci/dyplomanci/praca-dyplomowa)) a następnie wgrać ten plik do LaTeXa. Miejsce w kodzie, w którym należy podmienić plik jest odpowiednio zaznaczone komentarzem. 
+Strona tytułowa <u>**nie**</u> została przygotowana w LaTeXu ze względu na zwykłe lenistwo. LaTeX ma jednak możliwość wgrania pliku PDF i dołączenie go do całości dokumentu. Tak też jest dołączona strona tyytułowa w tym szablonie. Polecam wygenerować stronę tytułową np w google docsach jako PDF z szbalonu wydziałowego (dołączony plik `pd_szablon.docx`, pobrany z [Praca dyplomowa - Wydział Informatyki i Telekomunikacji](https://wit.pwr.edu.pl/studenci/dyplomanci/praca-dyplomowa)) a następnie wgrać ten plik do LaTeXa. Miejsce w kodzie, w którym należy podmienić plik jest odpowiednio zaznaczone komentarzem. 
 
 ## Przykłady
 
@@ -18,8 +18,8 @@ Przykłady jak wstawiać tabele, rysunki, równania czy listingi znajdują się 
 
 Wpisy literaturowe znajdują się w pliku `biblio.bib` i tam należy dodawać swoją literaturę, a następnie odwołać się do niej w tekscie np. poprzez `/cite{id}`. Przykłady również są w pliku `chapter1.tex`.
 
+## Jak uruchomić szablon?
 
+Polecam [Overleafa](https://overleaf.com/). Wgrywacie wszystkie pliki do nowego projektu i powinno wszystko działać. W innych narzędziach pewnie trzeba będzie doinstalować różne pakiety więc może być z tym dużo zabawy.  
 
-W razie jakiś pytań i problemów chętnie pomogę. **Piszcie w LaTeXu bo jest super :)**
-
-
+Szablon na pewno nie jest idealny ale jak dla mnie wystarczający. W razie pytań i problemów chętnie pomogę. **Piszcie w LaTeXu bo jest super :)**
