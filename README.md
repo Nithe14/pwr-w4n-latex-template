@@ -1,4 +1,4 @@
-# Szablon pracy magisterkiej/inżynierksiej do LaTeXa dla wydziału W4N Politechniki Wrocławskiej
+# Szablon pracy magisterskiej/inżynierskiej do LaTeXa dla wydziału W4N Politechniki Wrocławskiej
 
 Stworzony szablon powinien przestrzegać wszystkoich wymogów edytorskich określonych na stronie wydziału. Jakby coś się nie zgadzało to proszę o kontakt.
 
